@@ -1,0 +1,36 @@
+# Restricted or derived clinical data must never be committed.
+data/
+private/
+outputs/
+results/
+INSPIRE*/
+*.csv
+*.csv.gz
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.joblib
+*.pkl
+*.pickle
+*.tar
+*.tar.gz
+*.zip
+
+# Local configuration and credentials.
+.env
+.env.*
+config.local.toml
+*.pem
+*.key
+
+# Python and operating-system noise.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# The public repository contains source code and documentation only.
+# Aggregate result files should be reviewed separately before release.

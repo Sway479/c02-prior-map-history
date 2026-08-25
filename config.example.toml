@@ -1,0 +1,29 @@
+# Keep the populated file outside the public repository. Relative paths below
+# are resolved under private_workspace.
+
+[paths]
+private_workspace = "/secure/path/c02-private-workspace"
+# Add only verified encrypted/offloaded real roots used by symlinks below the
+# private workspace. Leave empty when no protected path crosses a symlink.
+allowed_private_real_roots = []
+private_output_root = "analysis-output"
+private_derived_root = "derived-restricted"
+aggregate_release_root = "aggregate-release-candidate"
+
+# Protected primary analytic cohorts.
+inspire_pair_cohort = "derived-restricted/inspire_first_two_pair_cohort.csv.gz"
+mover_pair_cohort = "derived-restricted/mover_c02_pair_cohort.csv.gz"
+
+# Protected MOVER streams obtained or derived under the MOVER DUA.
+mover_map_stream = "derived-restricted/mover_cleaned_early_map.csv.gz"
+mover_full_map_stream = "derived-restricted/mover_cleaned_full_intraop_map.csv.gz"
+mover_hypnotic_mar = "derived-restricted/mover_early_anesthetic_mar.csv.gz"
+mover_vasopressor_mar = "derived-restricted/mover_early_vasopressor_mar.csv.gz"
+mover_patient_information = "source/MOVER/EPIC_EMR/EMR/patient_information.csv"
+mover_epic_archive = "source/MOVER/EPIC_EMR.tar.gz"
+
+# Protected INSPIRE history-depth intermediates. Their construction protocol
+# and source-conflict audit must be completed before the history stage.
+inspire_history_pairs = "derived-restricted/inspire_history_pairs.csv.gz"
+inspire_exclusion_flags = "derived-restricted/inspire_exclusion_flags.csv.gz"
+inspire_triplet_conflict_audit = "derived-restricted/inspire_triplet_conflict_audit.csv.gz"
